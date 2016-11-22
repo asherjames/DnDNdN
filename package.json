@@ -9,7 +9,9 @@
   "dependencies": {
     "react": "15.3.2",
     "react-native": "0.37.0",
-    "react-native-action-button": "^2.0.15"
+    "react-native-action-button": "^2.0.15",
+    "react-redux": "^4.4.6",
+    "redux": "^3.6.0"
   },
   "jest": {
     "preset": "jest-react-native"
