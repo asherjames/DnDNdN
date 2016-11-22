@@ -14,6 +14,6 @@ export default class RollButton extends Component {
     }
 }
 
-RollButton.propTypes = {
-    rollTap: PropTypes.func.isRequired
-}
+// RollButton.propTypes = {
+//     rollTap: PropTypes.func.isRequired
+// }
