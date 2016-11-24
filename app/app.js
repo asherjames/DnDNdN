@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import DicePicker from './components/DicePicker'
 import Header from './components/Header'
 import RollButton from './components/RollButton'
 import {
@@ -12,6 +13,7 @@ export default class DnDNdN extends Component {
         return (
             <View style={appStyle.mainView}>
                 <Header/>
+                <DicePicker/>
                 <RollButton style={appStyle.button}/>
             </View>
         );
