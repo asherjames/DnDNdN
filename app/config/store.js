@@ -4,9 +4,11 @@ import reducer from '../reducers/reducer'
 export default function configureState() {
     const initialState = {
         numOfRolls: 0,
-        diceNum: 0,
+        dieType: "",
         modifier: 0,
-        isRolling: false
+        isRolling: false,
+        hasRolled: false,
+        result: 0
     }
 
     return createStore(reducer, initialState)
