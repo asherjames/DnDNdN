@@ -5,8 +5,10 @@ import {
     View
 } from 'react-native'
 import {ButtonGroup} from 'react-native-elements'
+import {connect} from 'react-redux'
+import {diceTypeSelected} from '../actions/actions'
 
-export default class DicePicker extends Component {
+class DicePickerComponent extends Component {
     constructor(props) {
         super(props)
     }
@@ -28,6 +30,16 @@ const dicePickerStyle = StyleSheet.create({
     }
 })
 
-DicePicker.propTypes = {
+DicePickerComponent.propTypes = {
     onDieTap: PropTypes.func.isRequired
 }
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onDieTap: (dieType) => {
+            dispatch(diceTypeSelected(dieType))
+        }
+    }
+}
+
+const DicePicker = connect(null, mapDispatchToProps)(DicePickerComponent)

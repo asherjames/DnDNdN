@@ -3,7 +3,7 @@ import reducer from '../reducers/reducer'
 
 export default function configureState() {
     const initialState = {
-        numOfRolls: 0,
+        numOfRolls: 1,
         dieType: "",
         modifier: 0,
         isRolling: false,

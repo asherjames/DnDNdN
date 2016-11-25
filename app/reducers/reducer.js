@@ -14,7 +14,7 @@ export default function reducer(state = {}, action) {
             return Object.assign({}, state, {
                 modifier: action.payload
             })
-        case a.ROLL_PRESSED:
+        case a.ROLL_STARTED:
             return Object.assign({}, state, {
                 hasRolled: true,
                 isRolling: true
@@ -24,5 +24,7 @@ export default function reducer(state = {}, action) {
                 isRolling: false,
                 result: action.payload
             })
+        default:
+            return state
     }
 }
