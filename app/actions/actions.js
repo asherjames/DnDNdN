@@ -5,7 +5,8 @@ export const ROLL_FINISHED      = 'ROLL_FINISHED'
 export const ROLL_NUM_SELECTED  = 'ROLL_NUM_SELECTED'
 export const ROLL_PRESSED       = 'ROLL_PRESSED'
 
-const random = require('random-number-generator')
+const Random = require('random-js')
+const rand = new Random(Random.engines.mt19937().autoSeed())
 
 export function rollNumSelected(num) {
     return {
@@ -75,6 +76,10 @@ function rollDie(dieType) {
         case "D20":
             return random(20, 1)
     }
+}
+
+function random(max, min) {
+    return rand.integer(min, max)
 }
 
 function sleep(ms) {

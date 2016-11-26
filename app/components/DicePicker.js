@@ -8,14 +8,21 @@ import {diceTypeSelected} from '../actions/actions'
 class DicePickerComponent extends Component {
     constructor(props) {
         super(props)
+        this.state = {
+            selectedIndex: 0
+        }
     }
 
     render() {
         const buttons = ['D4', 'D6', 'D8', 'D10', 'D12', 'D20']
         return (
             <ButtonGroup buttons={buttons}
-                         selectedIndex={1}
+                         selectedIndex={this.state.selectedIndex}
                          containerStyle={pickerStyle.pickerContainer}
+                         onPress={(index) => {
+                             this.setState({selectedIndex: index})
+                             this.props.onDieTap(buttons[index])
+                         }}
             />
         )
     }
