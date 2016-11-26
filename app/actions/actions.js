@@ -32,6 +32,7 @@ export function rollPressed() {
     return(dispatch, getState) => {
         dispatch(rollStarted())
         let result = determineResult(getState())
+        sleep(2000).then(() => dispatch(rollFinished(result)))
     }
 }
 
@@ -74,4 +75,8 @@ function rollDie(dieType) {
         case "D20":
             return random(20, 1)
     }
+}
+
+function sleep(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms))
 }

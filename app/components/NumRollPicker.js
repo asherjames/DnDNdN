@@ -1,17 +1,16 @@
 import React, {Component, PropTypes} from 'react'
-import {StyleSheet, Text, View} from 'react-native'
 import {ButtonGroup} from 'react-native-elements'
 import {connect} from 'react-redux'
 import {pickerStyle} from './PickerStyle'
-import {diceTypeSelected} from '../actions/actions'
+import {rollNumSelected} from '../actions/actions'
 
-class DicePickerComponent extends Component {
+class NumRollPickerComponent extends Component {
     constructor(props) {
         super(props)
     }
 
     render() {
-        const buttons = ['D4', 'D6', 'D8', 'D10', 'D12', 'D20']
+        const buttons = [1,2,3,4]
         return (
             <ButtonGroup buttons={buttons}
                          selectedIndex={1}
@@ -21,18 +20,18 @@ class DicePickerComponent extends Component {
     }
 }
 
-DicePickerComponent.propTypes = {
-    onDieTap: PropTypes.func.isRequired
+NumRollPickerComponent.propTypes = {
+    onNumRollTap: PropTypes.func.isRequired
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        onDieTap: (dieType) => {
-            dispatch(diceTypeSelected(dieType))
+        onNumRollTap: (numRolls) => {
+            dispatch(rollNumSelected(numRolls))
         }
     }
 }
 
-const DicePicker = connect(null, mapDispatchToProps)(DicePickerComponent)
+const NumRollPicker = connect(null, mapDispatchToProps)(NumRollPickerComponent)
 
-export default DicePicker
+export default NumRollPicker

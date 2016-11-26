@@ -26,3 +26,4 @@ DerivedData
 node_modules/
 npm-debug.log
 .idea
+/android/.gradle/2.4/taskArtifacts/
