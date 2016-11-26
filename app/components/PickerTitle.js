@@ -18,11 +18,9 @@ export default class PickerTitle extends Component {
 const pickerTitleStyle = StyleSheet.create({
     titleContainer: {
         height: 50,
-        // justifyContent: "left"
     },
     titleText: {
         color: '#FF5552',
-        // textAlign: 'center',
         fontFamily: 'Bungee-Regular',
         fontSize: 15
     }
