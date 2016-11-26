@@ -16,8 +16,7 @@ const headerStyle = StyleSheet.create({
     headerText: {
         color: '#FF5552',
         textAlign: 'center',
-        fontFamily: 'Roboto',
-        fontWeight: '900',
-        fontSize: 20
+        fontFamily: 'Bungee-Regular',
+        fontSize: 40
     }
 })
