@@ -54,7 +54,7 @@ function determineResult(state) {
     let dieType = state.dieType
     let result = 0
 
-    for(let i = 0; i <= state.numOfRolls; i++) {
+    for(let i = 0; i < state.numOfRolls; i++) {
         result += rollDie(dieType)
     }
 

@@ -1,6 +1,15 @@
 import * as a from '../actions/actions'
 
-export default function reducer(state = {}, action) {
+let initialState = {
+    numOfRolls: 1,
+    dieType: "D4",
+    modifier: 0,
+    isRolling: false,
+    hasRolled: false,
+    result: 0
+}
+
+export default function reducer(state = initialState, action) {
     switch (action.type) {
         case a.DICE_TYPE_SELECTED:
             return Object.assign({}, state, {
@@ -25,6 +34,6 @@ export default function reducer(state = {}, action) {
                 result: action.payload
             })
         default:
-            return state
+            return initialState
     }
 }
