@@ -33,7 +33,7 @@ export function rollPressed() {
     return(dispatch, getState) => {
         dispatch(rollStarted())
         let result = determineResult(getState())
-        sleep(2000).then(() => dispatch(rollFinished(result)))
+        sleep(1000).then(() => dispatch(rollFinished(result)))
     }
 }
 

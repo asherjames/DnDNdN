@@ -6,6 +6,7 @@ import ModPicker from './components/ModPicker'
 import PickerTitle from './components/PickerTitle'
 import Header from './components/Header'
 import RollButton from './components/RollButton'
+import RollResult from './components/RollResult'
 import {StyleSheet, Text, View} from 'react-native'
 import configureStore from './config/store'
 
@@ -22,6 +23,7 @@ export default class DnDNdN extends Component {
                     <PickerTitle text="Modifier"/>
                     <ModPicker/>
                     <RollButton style={appStyle.button}/>
+                    <RollResult/>
                 </View>
             </Provider>
         );
@@ -33,8 +35,6 @@ const appStyle = StyleSheet.create({
         backgroundColor: "#420100",
         flex: 1,
         flexDirection: 'column',
-        // justifyContent: 'center',
-        // alignItems: 'center'
     },
     button: {
         color: "#D5FFE2"
