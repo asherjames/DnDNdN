@@ -22,8 +22,12 @@ export default class DnDNdN extends Component {
                     <DicePicker/>
                     <PickerTitle text="Modifier"/>
                     <ModPicker/>
-                    <RollButton style={appStyle.button}/>
-                    <RollResult/>
+                    <View style={appStyle.buttonContainer}>
+                        <RollButton style={appStyle.button}/>
+                    </View>
+                    <View style={appStyle.resultContainer}>
+                        <RollResult/>
+                    </View>
                 </View>
             </Provider>
         );
@@ -35,6 +39,19 @@ const appStyle = StyleSheet.create({
         backgroundColor: "#420100",
         flex: 1,
         flexDirection: 'column',
+    },
+    buttonContainer: {
+        flex:1,
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    resultContainer: {
+        flex:1,
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'flex-end',
+        bottom: 40
     },
     button: {
         color: "#D5FFE2"

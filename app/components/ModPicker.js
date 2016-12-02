@@ -16,6 +16,7 @@ class ModPickerComponent extends Component {
         const buttons = [0,1,2,3,4]
         return (
             <ButtonGroup buttons={buttons}
+                         selectedBackgroundColor="#E1D8DB"
                          selectedIndex={this.state.selectedIndex}
                          containerStyle={pickerStyle.pickerContainer}
                          onPress={(index) => {

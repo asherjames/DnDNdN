@@ -14,13 +14,13 @@ class RollResultComponent extends Component {
         let content
         if(this.props.hasRolled) {
             if(this.props.isRolling) {
-                content = <Spinner type="WanderingCubes"/>
+                content = <Spinner type="WanderingCubes" color="#FFF2C2"/>
             } else {
                 content = <Text style={rollResultStyle.rollResultText}>{this.props.result}</Text>
             }
         }
         return (
-            <View style={rollResultStyle.rollResultContainer}>{content}</View>
+            <View>{content}</View>
         )
     }
 }
@@ -29,11 +29,8 @@ const rollResultStyle = StyleSheet.create({
     rollResultText: {
         color: '#7E0E8E',
         fontFamily: 'Bungee-Regular',
-        fontSize: 50
+        fontSize: 85
     },
-    rollResultContainer: {
-
-    }
 })
 
 RollResultComponent.propTypes = {
