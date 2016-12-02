@@ -31,9 +31,12 @@ export function modifierSelected(mod) {
 
 export function rollPressed() {
     return(dispatch, getState) => {
-        dispatch(rollStarted())
-        let result = determineResult(getState())
-        sleep(1000).then(() => dispatch(rollFinished(result)))
+        return new Promise((resolve) => {
+            dispatch(rollStarted())
+            let result = determineResult(getState())
+            sleep(1000).then(() => dispatch(rollFinished(result)))
+            resolve()
+        })
     }
 }
 
